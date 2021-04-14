@@ -65,6 +65,7 @@ func (ha *HomeAssistant) createReqResp(url string) (*fasthttp.Request, *fasthttp
 	return req, resp
 }
 
+//httpGet - send GET request
 func (ha *HomeAssistant) httpGet(path string) ([]byte, error) {
 	url := ha.URL + path
 	req, resp := ha.createReqResp(url)
@@ -76,6 +77,7 @@ func (ha *HomeAssistant) httpGet(path string) ([]byte, error) {
 	return resp.Body(), nil
 }
 
+//httpPost - send POST request with json
 func (ha *HomeAssistant) httpPost(path string, json []byte) ([]byte, error) {
 	url := ha.URL + path
 	req, resp := ha.createReqResp(url)
