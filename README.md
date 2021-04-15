@@ -1,2 +1,2 @@
 # HomeAssistantAPI
-Golang HTTP Client to interact with Home Assistnant
+Golang FastHTTP Client to interact with Home Assistnant
